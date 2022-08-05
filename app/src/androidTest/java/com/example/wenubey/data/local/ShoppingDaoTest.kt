@@ -61,7 +61,7 @@ class ShoppingDaoTest {
     }
 
     @Test
-    fun deleteShoppingItem() = runBlockingTest {
+    fun deleteShoppingItem() = runTest {
         val shoppingItem = ShoppingItem("name", 1, 1f, "url", id = 1)
         dao.insertShoppingItem(shoppingItem)
         dao.deleteShoppingItem(shoppingItem)
